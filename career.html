@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== ضدچشمک‌زدن ===== -->
+    <script>
+        (function(){
+            var stored = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme = stored || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <title data-i18n="career_title_meta">مسیر حرفه‌ای من — امیرحسین خسروی</title>
+    <meta name="description" data-i18n="career_desc_meta" content="سوابق کاری و مسیر حرفه‌ای امیرحسین خسروی">
+    <meta name="theme-color" content="#F4EBE1">
+    <meta property="og:title" data-i18n="career_og_title" content="مسیر حرفه‌ای من — امیرحسین خسروی">
+    <meta property="og:type" content="profile">
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CclipPath id='clip'%3E%3Crect x='5' y='5' width='90' height='90' rx='20'/%3E%3C/clipPath%3E%3ClinearGradient id='grad' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23000000' stop-opacity='0.35'/%3E%3Cstop offset='100%25' stop-color='%23000000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='5' y='5' width='90' height='90' rx='20' fill='%23F0E6D3'/%3E%3Cg clip-path='url(%23clip)'%3E%3Cpolygon points='54,-20 0,110 20,110 58,-18' fill='url(%23grad)'/%3E%3Cpolygon points='66,-20 100,110 80,110 62,-18' fill='url(%23grad)'/%3E%3Cpolygon points='0,100 100,100 100,120 0,120' fill='%23000000'/%3E%3Cpolygon points='58,45 30,100 70,100' fill='%23000000' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-career">
+<div class="grid-overlay" aria-hidden="true"></div>
+    <!-- لایه تزئینی پس‌زمینه با پارالکس موس -->
+    <div class="geo-decorations" aria-hidden="true">
+        <div class="geo-wrapper shape-1" data-speed="1.5"><div class="geo-shape anim-float"><svg viewBox="0 0 100 100"><path d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z"/></svg></div></div>
+        <div class="geo-wrapper shape-2" data-speed="-1"><div class="geo-shape anim-rotate"><svg width="100%" height="100%" viewBox="0 0 100 100" stroke-width="2.5" fill="none"><line x1="0" y1="25" x2="100" y2="25"/><line x1="0" y1="50" x2="100" y2="50"/><line x1="0" y1="75" x2="100" y2="75"/><line x1="25" y1="0" x2="25" y2="100"/><line x1="50" y1="0" x2="50" y2="100"/><line x1="75" y1="0" x2="75" y2="100"/></svg></div></div>
+        <div class="geo-wrapper shape-3" data-speed="0.8"><div class="geo-shape anim-float-rev"><svg width="100%" height="100%" viewBox="0 0 140 40"><circle cx="10" cy="20" r="4"/><circle cx="30" cy="20" r="4"/><circle cx="50" cy="20" r="4"/><circle cx="70" cy="20" r="4"/><circle cx="90" cy="20" r="4"/><circle cx="110" cy="20" r="4"/><circle cx="130" cy="20" r="4"/></svg></div></div>
+        <div class="geo-wrapper shape-4" data-speed="-1.2"><div class="geo-shape anim-pulse"><svg viewBox="0 0 100 100" fill="none" stroke-width="5"><path d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z"/></svg></div></div>
+        <div class="geo-wrapper shape-5" data-speed="1.1"><div class="geo-shape anim-rotate-rev"><svg width="100%" height="100%" viewBox="0 0 100 100" stroke-width="4" stroke-linecap="round"><line x1="10" y1="10" x2="90" y2="90"/><line x1="30" y1="10" x2="90" y2="70"/><line x1="10" y1="30" x2="70" y2="90"/></svg></div></div>
+        <div class="geo-wrapper shape-6" data-speed="-0.9"><div class="geo-shape anim-float"><svg width="100%" height="100%" viewBox="0 0 100 100"><path d="M50,10 A40,40 0 0,0 50,90 A25,25 0 0,1 50,10 Z"/></svg></div></div>
+        <div class="geo-wrapper shape-7" data-speed="1.4"><div class="geo-shape anim-float-rev"><svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" stroke-width="4"><polygon points="50,10 90,90 10,90" /><polygon points="50,30 75,80 25,80" /></svg></div></div>
+        <div class="geo-wrapper shape-8" data-speed="-0.7"><div class="geo-shape anim-pulse"><svg width="100%" height="100%" viewBox="0 0 100 30" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="0,15 15,5 30,15 45,5 60,15 75,5 90,15 105,5"/></svg></div></div>
+    </div>
+
+    <!-- ========== HEADER با دکمه تم و ناوبری ========== -->
+    <header class="site-header" role="banner" data-reveal="load" style="--delay:0">
+        <div class="header-inner">
+            <button id="themeToggle" class="theme-switch" aria-label="تغییر حالت نمایش" aria-pressed="false">
+                <!-- خورشید (حالت روز) -->
+                <svg class="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <!-- ماه (حالت شب) - در ابتدا مخفی -->
+                <svg class="theme-icon moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+                <span class="theme-label" data-i18n="switch_to_dark">حالت شب</span>
+            </button>
+
+            <!-- ناوبری پیل (دسکتاپ) -->
+            <nav class="nav-pills" aria-label="ناوبری اصلی">
+                <a href="index.html" class="nav-pill" data-page="profile">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span data-i18n="nav_profile">پروفایل</span>
+                </a>
+                <a href="career.html" class="nav-pill active" data-page="career">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 22v-4M4 12H2M22 12h-2M19.07 4.93l-2.83 2.83M6.34 17.66l-2.83 2.83M17.66 6.34l2.83-2.83M4.93 19.07l2.83-2.83"/></svg>
+                    <span data-i18n="nav_career">مسیر حرفه‌ای</span>
+                </a>
+                <a href="skills.html" class="nav-pill" data-page="skills">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    <span data-i18n="nav_skills">مهارت‌ها</span>
+                </a>
+                <a href="certificates.html" class="nav-pill" data-page="certificates">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    <span data-i18n="nav_certs">گواهینامه‌ها</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <header class="career-topbar">
+            <div class="career-header-content">           
+                <h1 data-i18n="career_title">مسیر حرفه‌ای و سوابق کاری</h1>
+            </div>
+        </header>
+
+        <section class="timeline">
+            <svg class="timeline-winding-svg" preserveAspectRatio="none" viewBox="0 0 40 2000">
+                <path id="scrollWindingPath" d="M20 0 C38 150, 2 300, 20 450 C38 600, 2 750, 20 900 C38 1050, 2 1200, 20 1350 C38 1500, 2 1650, 20 1800 C38 1900, 2 1950, 20 2000" fill="none" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+
+            <!-- ردیف‌های تایم‌لاین -->
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_1_year">۱۳۹۵</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+                            <h3 data-i18n="timeline_1_title">کارشناس فروش و ارتباط با مشتری در خرده‌فروشی</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_1_dur">۶ ماه سابقه</span>
+                        <p data-i18n="timeline_1_desc">ارائه خدمات به مشتریان، مدیریت سفارش‌ها و تجربه تعامل مستقیم با مشتری</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_2_year">۱۳۹۶</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                            <h3 data-i18n="timeline_2_title">کارشناس فروش محصولات مصرفی و مدیریت فرآیند فروش</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_2_dur">۶ ماه سابقه</span>
+                        <p data-i18n="timeline_2_desc">معرفی محصولات، راهنمایی مشتریان و پیگیری فرآیند فروش</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_3_year">۱۳۹۸ - ۱۳۹۹</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></div>
+                            <h3 data-i18n="timeline_3_title">کارشناس فروش محصولات دیجیتال و لوازم جانبی موبایل</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_3_dur">۲ سال سابقه</span>
+                        <p data-i18n="timeline_3_desc">فروش و مشاوره محصولات دیجیتال، شناخت بازار موبایل و لوازم جانبی، ارتباط با تأمین‌کنندگان و مدیریت سفارش‌ها</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_4_year">۱۴۰۰</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                            <h3 data-i18n="timeline_4_title">تکنسین تعمیرات تلفن همراه و بردهای الکترونیکی</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_4_dur">۱ سال سابقه</span>
+                        <p data-i18n="timeline_4_desc">عیب‌یابی سخت‌افزاری و نرم‌افزاری موبایل، تعمیر و تعویض قطعات، تحلیل مشکلات فنی و ارائه راهکار مناسب</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_5_year">۱۴۰۲ - ۱۴۰۵</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                            <h3 data-i18n="timeline_5_title">فعالیت فریلنسری در حوزه‌های فنی، دیجیتال و اجرایی</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_5_dur">۳ سال سابقه</span>
+                        <p data-i18n="timeline_5_desc">اجرای پروژه‌های مستقل، ارتباط با مشتری، مدیریت زمان، حل مسئله و ارائه خدمات تخصصی متناسب با نیاز کارفرما</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_6_year">۱۴۰۲ - ۱۴۰۳</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></div>
+                            <h3 data-i18n="timeline_6_title">کارشناس حسابداری و امور مالی</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_6_dur">۶ ماه سابقه</span>
+                        <p data-i18n="timeline_6_desc">ثبت و بررسی اطلاعات مالی، مدیریت اسناد، پیگیری امور حسابداری و آشنایی با فرآیندهای مالی سازمانی</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_7_year">۱۴۰۲ - ۱۴۰۴</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                            <h3 data-i18n="timeline_7_title">مدیر تیم‌های اجرایی، هنری و فنی</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_7_dur">۳ سال سابقه</span>
+                        <p data-i18n="timeline_7_desc">برنامه‌ریزی و هماهنگی فعالیت تیم‌ها، تقسیم وظایف، مدیریت اجرا، هدایت نیروها و نظارت بر روند انجام پروژه‌ها و مراسمات</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_8_year">۱۴۰۳</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                            <h3 data-i18n="timeline_8_title">کارشناس نصب و پشتیبانی تجهیزات IT و سیستم‌های امنیتی</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_8_dur">۶ ماه سابقه</span>
+                        <p data-i18n="timeline_8_desc">نصب و راه‌اندازی دوربین‌های مداربسته و تجهیزات امنیتی، پشتیبانی فنی و عیب‌یابی تجهیزات</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_9_year">۱۴۰۴</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                            <h3 data-i18n="timeline_9_title">کارشناس فروش تلفنی و توسعه ارتباط با مشتریان</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_9_dur">۶ ماه سابقه</span>
+                        <p data-i18n="timeline_9_desc">برقراری ارتباط با مشتریان، معرفی خدمات و محصولات، پیگیری سرنخ‌های فروش و افزایش تعامل مشتری</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center"><span data-i18n="timeline_10_year">۱۴۰۴</span></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                            <h3 data-i18n="timeline_10_title">کارشناس بازاریابی حضوری و توسعه بازار</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_10_dur">۳ ماه سابقه</span>
+                        <p data-i18n="timeline_10_desc">شناسایی مشتریان بالقوه، معرفی محصولات و خدمات، ایجاد ارتباط مستقیم و جمع‌آوری بازخورد بازار</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-year-center">
+                    <span data-i18n="timeline_11_year">۱۴۰۴ - ۱۴۰۵</span>
+                    <span class="now-badge" data-i18n="now_badge">اکنون</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+                            <h3 data-i18n="timeline_11_title">کارشناس بازاریابی دیجیتال و فعالیت‌های آنلاین</h3>
+                        </div>
+                        <span class="duration-badge" data-i18n="timeline_11_dur">۶ ماه سابقه</span>
+                        <p data-i18n="timeline_11_desc">فعالیت در شبکه‌های اجتماعی، تولید و مدیریت محتوای دیجیتال، بررسی رفتار مخاطب و اجرای فعالیت‌های بازاریابی آنلاین</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ============ نوار پایین موبایل ============ -->
+    <nav class="bottom-tab-bar" aria-label="ناوبری سریع">
+        <a href="index.html" class="tab-item" data-page="profile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span data-i18n="nav_profile">پروفایل</span>
+        </a>
+        <a href="career.html" class="tab-item active" data-page="career">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 22v-4M4 12H2M22 12h-2M19.07 4.93l-2.83 2.83M6.34 17.66l-2.83 2.83M17.66 6.34l2.83-2.83M4.93 19.07l2.83-2.83"/></svg>
+            <span data-i18n="nav_career">مسیر حرفه‌ای</span>
+        </a>
+        <a href="skills.html" class="tab-item" data-page="skills">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <span data-i18n="nav_skills">مهارت‌ها</span>
+        </a>
+        <a href="certificates.html" class="tab-item" data-page="certificates">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <span data-i18n="nav_certs">گواهینامه‌ها</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

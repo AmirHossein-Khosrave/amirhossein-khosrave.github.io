@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== ضدچشمک‌زدن (FOUC) برای تم ===== -->
+    <script>
+        (function(){
+            var stored = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme = stored || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <title data-i18n="index_title">امیرحسین خسروی — پروفایل شخصی</title>
+    <meta name="description" data-i18n="index_desc" content="پروفایل شخصی — فارغ‌التحصیل مقطع لیسانس رشته مدیریت صنعتی">
+    <meta name="theme-color" content="#F4EBE1">
+    <meta property="og:title" data-i18n="index_og_title" content="امیرحسین خسروی — پروفایل شخصی">
+    <meta property="og:description" data-i18n="index_og_desc" content="فارغ‌التحصیل مقطع لیسانس، رشته مدیریت صنعتی">
+    <meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CclipPath id='clip'%3E%3Crect x='5' y='5' width='90' height='90' rx='20'/%3E%3C/clipPath%3E%3ClinearGradient id='grad' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23000000' stop-opacity='0.35'/%3E%3Cstop offset='100%25' stop-color='%23000000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='5' y='5' width='90' height='90' rx='20' fill='%23F0E6D3'/%3E%3Cg clip-path='url(%23clip)'%3E%3Cpolygon points='54,-20 0,110 20,110 58,-18' fill='url(%23grad)'/%3E%3Cpolygon points='66,-20 100,110 80,110 62,-18' fill='url(%23grad)'/%3E%3Cpolygon points='0,100 100,100 100,120 0,120' fill='%23000000'/%3E%3Cpolygon points='58,45 30,100 70,100' fill='%23000000' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-index">
+
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <!-- ========== HEADER جدید – فقط دکمه‌های تم و زبان در گوشه چپ بالا ========== -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <!-- دکمه تغییر تم (بدون متن) -->
+            <button id="themeToggle" class="theme-switch" aria-label="تغییر حالت نمایش" aria-pressed="false">
+                <svg class="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="theme-icon moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+
+            <!-- دکمه تغییر زبان -->
+            <button id="langToggle" class="lang-switch" aria-label="تغییر زبان / Switch language">
+                <span class="lang-flag" data-i18n="switch_flag">🇬🇧</span>
+                <span class="lang-label" data-i18n="switch_lang">English</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page">
+        <!-- ============ HERO / PROFILE ============ -->
+        <section class="hero" id="profile">
+            <div class="hero-media" data-reveal="load" style="--delay:0">
+                <div class="frame-marks" aria-hidden="true">
+                    <span class="mark mark--tl"></span>
+                    <span class="mark mark--tr"></span>
+                    <span class="mark mark--bl"></span>
+                    <span class="mark mark--br"></span>
+                </div>
+                <div class="arch-photo">
+                    <div class="photo-placeholder" aria-hidden="true"></div>
+                    <img src="profile.webp" alt="امیرحسین خسروی" class="profile-img" onerror="this.style.display='none'">
+                </div>
+                <span class="media-caption" data-i18n="profile_caption">کارشناس فناوری و مدیریت</span>
+            </div>
+
+            <div class="hero-content">
+                <p class="eyebrow" data-i18n="profile_eyebrow" data-reveal="load" style="--delay:1">Profile — Dossier</p>
+                <h1 class="name" data-i18n="profile_name" data-reveal="load" style="--delay:2">امیرحسین خسروی</h1>
+                <p class="subtitle" data-i18n="profile_subtitle" data-reveal="load" style="--delay:3">فارغ‌التحصیل مقطع لیسانس، رشته مدیریت صنعتی</p>
+
+                <div class="contact-links" data-reveal="load" style="--delay:4">
+                    <a href="mailto:amir.dev.101@gmail.com" class="contact-link" aria-label="ایمیل">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <span data-i18n="contact_email">ایمیل</span>
+                    </a>
+                    <a href="tel:+989214840537" class="contact-link" aria-label="شماره تماس">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span data-i18n="contact_phone">شماره تماس</span>
+                    </a>
+                    <a href="https://t.me/Amirhkhosravi" target="_blank" rel="noopener" class="contact-link" aria-label="تلگرام">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                        <span data-i18n="contact_telegram">تلگرام من</span>
+                    </a>
+                </div>
+
+                <div class="actions" data-reveal="load" style="--delay:5">
+                    <a href="career.html" class="btn btn-primary" data-i18n="btn_career">مسیر حرفه‌ای من</a>
+                    <a href="skills.html" class="btn" data-i18n="btn_skills">توانمندی‌های من</a>
+                    <a href="certificates.html" class="btn" data-i18n="btn_certificates">گواهینامه‌های من</a>
+                </div>
+            </div>
+
+            <!-- نشانگر اسکرول -->
+            <div class="scroll-indicator" aria-hidden="true" role="button" tabindex="0" aria-label="اسکرول به پایین">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5"/>
+                    <path d="M7 6l5 5 5-5"/>
+                </svg>
+            </div>
+        </section>
+
+        <div class="divider" aria-hidden="true"><span class="divider-arch"></span></div>
+
+        <!-- ============ ABOUT ============ -->
+        <section class="about" id="about">
+            <p class="eyebrow" data-i18n="about_eyebrow" data-reveal="scroll" style="--delay:0">About</p>
+            <h2 class="section-title" data-i18n="about_title" data-reveal="scroll" style="--delay:1">درباره من</h2>
+
+            <div class="info-cards-grid" data-reveal="scroll" style="--delay:2">
+                <div class="info-card">
+                    <span class="info-card-top" data-i18n="info_resident">ساکن</span>
+                    <p class="info-card-bottom" data-i18n="info_resident_value">مشهد</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-card-top" data-i18n="info_birth">سال تولد</span>
+                    <p class="info-card-bottom" data-i18n="info_birth_value">۱۳۸۱</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-card-top">+<span class="counter" data-target="10">0</span></span>
+                    <p class="info-card-bottom" data-i18n="info_experience">سال سابقه کار</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-card-top">+<span class="counter" data-target="25">0</span></span>
+                    <p class="info-card-bottom" data-i18n="info_projects">پروژه موفق</p>
+                </div>
+            </div>
+
+            <p class="about-text" data-i18n="about_text_1" data-reveal="scroll" style="--delay:3">فردی مسئولیت‌پذیر، یادگیرنده و علاقه‌مند به توسعه مهارت‌های حرفه‌ای با پیشینه‌ای ترکیبی در حوزه مدیریت، فناوری و فعالیت‌های اجرایی هستم. در مسیر تحصیلی و کاری خود تلاش کرده‌ام علاوه بر کسب دانش تخصصی، تجربه عملی در مواجهه با مسائل واقعی، ارتباط با مشتری، کار تیمی و اجرای پروژه‌ها به دست آورم.</p>
+            <p class="about-text" data-i18n="about_text_2" data-reveal="scroll" style="--delay:4">تجربه فعالیت در حوزه‌های مختلف به من توانایی تحلیل مسئله، یادگیری سریع، سازگاری با شرایط جدید و ارائه راهکارهای عملی را آموخته است. همواره تلاش می‌کنم با رویکردی ساختارمند، دقت در انجام وظایف و مسئولیت‌پذیری در قبال نتایج، ارزش قابل توجهی برای مجموعه‌ای که در آن فعالیت می‌کنم ایجاد کنم.</p>
+            <p class="about-text" data-i18n="about_text_3" data-reveal="scroll" style="--delay:5">علاقه‌مند به یادگیری مداوم و توسعه فردی هستم و باور دارم رشد حرفه‌ای حاصل ترکیب دانش، تجربه، خلاقیت و توانایی همکاری مؤثر با دیگران است. هدف من حضور در محیطی حرفه‌ای است که بتوانم در کنار افراد توانمند، دانش و مهارت‌های خود را توسعه داده و در بهبود فرآیندها و دستیابی به اهداف سازمان نقش مؤثری ایفا کنم.</p>
+        </section>
+
+        <div class="divider" aria-hidden="true"><span class="divider-arch"></span></div>
+
+        <!-- ============ FOOTER ============ -->
+        <footer class="site-footer" data-reveal="scroll" style="--delay:0">
+            <p><span data-i18n="footer_copyright">تمامی حقوق مادی و معنوی محفوظ است.</span> © <span id="year">2026</span></p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function(){
+            var stored = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme = stored || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <title data-i18n="skills_title_meta">توانمندی‌ها و مهارت‌های تخصصی</title>
+    <meta name="description" data-i18n="skills_desc_meta" content="لیست کامل مهارت‌ها، ابزارها و توانمندی‌های فنی، هوش مصنوعی، مدیریتی و نرم‌افزاری">
+    <meta name="theme-color" content="#F4EBE1">
+    <meta property="og:title" data-i18n="skills_og_title" content="توانمندی‌ها و مهارت‌های تخصصی">
+    <meta property="og:description" data-i18n="skills_og_desc" content="لیست کامل مهارت‌ها، ابزارها و توانمندی‌های فنی، هوش مصنوعی، مدیریتی و نرم‌افزاری">
+    <meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CclipPath id='clip'%3E%3Crect x='5' y='5' width='90' height='90' rx='20'/%3E%3C/clipPath%3E%3ClinearGradient id='grad' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23000000' stop-opacity='0.35'/%3E%3Cstop offset='100%25' stop-color='%23000000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='5' y='5' width='90' height='90' rx='20' fill='%23F0E6D3'/%3E%3Cg clip-path='url(%23clip)'%3E%3Cpolygon points='54,-20 0,110 20,110 58,-18' fill='url(%23grad)'/%3E%3Cpolygon points='66,-20 100,110 80,110 62,-18' fill='url(%23grad)'/%3E%3Cpolygon points='0,100 100,100 100,120 0,120' fill='%23000000'/%3E%3Cpolygon points='58,45 30,100 70,100' fill='%23000000' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-skills">
+
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <!-- ========== HEADER با دکمه تم و ناوبری ========== -->
+    <header class="site-header" role="banner" data-reveal="load" style="--delay:0">
+        <div class="header-inner">
+            <button id="themeToggle" class="theme-switch" aria-label="تغییر حالت نمایش" aria-pressed="false">
+                <!-- خورشید (حالت روز) -->
+                <svg class="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <!-- ماه (حالت شب) - در ابتدا مخفی -->
+                <svg class="theme-icon moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+                <span class="theme-label" data-i18n="switch_to_dark">حالت شب</span>
+            </button>
+
+            <!-- ناوبری پیل (دسکتاپ) -->
+            <nav class="nav-pills" aria-label="ناوبری اصلی">
+                <a href="index.html" class="nav-pill" data-page="profile">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span data-i18n="nav_profile">پروفایل</span>
+                </a>
+                <a href="career.html" class="nav-pill" data-page="career">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 22v-4M4 12H2M22 12h-2M19.07 4.93l-2.83 2.83M6.34 17.66l-2.83 2.83M17.66 6.34l2.83-2.83M4.93 19.07l2.83-2.83"/></svg>
+                    <span data-i18n="nav_career">مسیر حرفه‌ای</span>
+                </a>
+                <a href="skills.html" class="nav-pill active" data-page="skills">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    <span data-i18n="nav_skills">مهارت‌ها</span>
+                </a>
+                <a href="certificates.html" class="nav-pill" data-page="certificates">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    <span data-i18n="nav_certs">گواهینامه‌ها</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <!-- محتوای مهارت‌ها -->
+        <header class="page-header" data-reveal>
+            <p class="eyebrow" data-i18n="skills_eyebrow">Skills & Capabilities</p>
+            <h1 class="page-title" data-i18n="skills_title">توانمندی‌ها و مهارت‌های تخصصی</h1>
+            <div class="stats-dashboard">
+                <div class="stat-box"><span class="stat-num" data-target="32">0</span><span class="stat-label" data-i18n="stats_skills">مهارت و تخصص</span></div>
+                <div class="stat-box"><span class="stat-num" data-target="5">0</span><span class="stat-label" data-i18n="stats_ai">حوزه هوش مصنوعی</span></div>
+                <div class="stat-box"><span class="stat-num" data-target="9">0</span><span class="stat-label" data-i18n="stats_management">حوزه مدیریت</span></div>
+            </div>
+        </header>
+
+        <div class="toolbar" data-reveal>
+            <div class="search-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="جستجوی مهارت (مثلاً Python، فوتوشاپ یا تعمیرات)...">
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all" role="button" aria-pressed="true">همه</button>
+                <button class="filter-btn" data-filter="hardware" data-i18n="filter_hardware" role="button" aria-pressed="false">مهارت‌های فنی</button>
+                <button class="filter-btn" data-filter="dev" data-i18n="filter_dev" role="button" aria-pressed="false">برنامه‌نویسی و وب</button>
+                <button class="filter-btn" data-filter="ai" data-i18n="filter_ai" role="button" aria-pressed="false">هوش مصنوعی</button>
+                <button class="filter-btn" data-filter="manage" data-i18n="filter_manage" role="button" aria-pressed="false">تحلیلی و مدیریتی</button>
+                <button class="filter-btn" data-filter="software" data-i18n="filter_software" role="button" aria-pressed="false">نرم‌افزارها</button>
+                <button class="filter-btn" data-filter="lang" data-i18n="filter_lang" role="button" aria-pressed="false">زبان‌ها</button>
+            </div>
+            <button class="view-toggle" id="viewToggleBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                <span id="viewToggleText" data-i18n="view_compact">نمای فشرده</span>
+            </button>
+        </div>
+
+        <!-- بخش‌های مهارت -->
+        <section class="skills-section" data-reveal id="sec-hardware">
+            <div class="section-title">
+                <div class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></div>
+                <h2 data-i18n="section_hardware">مهارت‌های فنی</h2>
+            </div>
+            <div class="skills-grid">
+                <!-- کارت‌ها -->
+                <div class="skill-card" data-cat="hardware" data-id="hw-mobile">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_hw_mobile">📱 تعمیرات سخت‌افزار تلفن همراه</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_hw_mobile">عیب‌یابی، تعمیر و تعویض قطعات سخت‌افزاری تلفن همراه و آشنایی با تعمیرات برد، میکروسولد و ریبال.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="hardware" data-id="sw-mobile">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_sw_mobile">⚙️ تعمیرات نرم‌افزار تلفن همراه</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_sw_mobile">فلش، آنلاک، حذف FRP، روت، بازیابی اطلاعات، دانگرید و رفع مشکلات نرم‌افزاری انواع تلفن همراه.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="hardware" data-id="security-sys">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_security_sys">📹 نصب و راه‌اندازی سیستم‌های امنیتی</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_security_sys">نصب، راه‌اندازی و پیکربندی دوربین‌های مداربسته، DVR/NVR، سیستم‌های دزدگیر و کنترل تردد.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="hardware" data-id="pc-setup">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_pc_setup">🖥️ نصب و پشتیبانی سیستم‌های رایانه‌ای</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_pc_setup">نصب سیستم‌عامل، نرم‌افزارهای کاربردی، درایورها و ارائه خدمات پشتیبانی و رفع اشکال رایانه‌های شخصی.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="40%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="hardware" data-id="troubleshoot">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_troubleshoot">🔍 عیب‌یابی سخت‌افزار و نرم‌افزار</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_troubleshoot">شناسایی و رفع مشکلات سخت‌افزاری و نرم‌افزاری تجهیزات رایانه‌ای و تلفن همراه.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="60%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="hardware" data-id="networks">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_networks">🌐 شبکه‌های کامپیوتری</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_networks">راه‌اندازی و پیکربندی اولیه شبکه‌های کوچک و آشنایی با مفاهیم پایه شبکه.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="hardware" data-id="linux">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_linux">🐧 Linux</h3><span class="badge basic" data-i18n="badge_basic">آشنا</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_linux">آشنایی با محیط، ساختار فایل‌ها و دستورات پایه سیستم‌عامل Linux.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۲۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="20%"></div></div></div></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" aria-hidden="true" id="div-1"><span class="divider-arch"></span></div>
+
+        <!-- بخش ۲: برنامه‌نویسی و توسعه -->
+        <section class="skills-section" data-reveal id="sec-dev">
+            <div class="section-title">
+                <div class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 8h10"/><path d="M7 12h10"/><path d="M7 16h10"/></svg></div>
+                <h2 data-i18n="section_dev">برنامه‌نویسی و توسعه</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-cat="dev" data-id="python">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_python">🐍 Python</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_python">توسعه اسکریپت‌ها، ربات‌ها، ابزارهای اتوماسیون و پروژه‌های کاربردی با زبان Python.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="dev" data-id="html5">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_html5">📄 HTML5</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_html5">طراحی ساختار صفحات وب مطابق استانداردهای HTML5.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="dev" data-id="css3">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_css3">🎨 CSS3</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_css3">طراحی و پیاده‌سازی رابط کاربری و قالب‌بندی صفحات وب.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="dev" data-id="js">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_js">⚡ JavaScript</h3><span class="badge basic" data-i18n="badge_basic">آشنا</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_js">آشنایی با مفاهیم پایه و توسعه تعاملات سمت کاربر در صفحات وب.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۲۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="25%"></div></div></div></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" aria-hidden="true" id="div-2"><span class="divider-arch"></span></div>
+
+        <!-- بخش ۳: هوش مصنوعی -->
+        <section class="skills-section" data-reveal id="sec-ai">
+            <div class="section-title">
+                <div class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <h2 data-i18n="section_ai">هوش مصنوعی</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-cat="ai" data-id="ai-generative">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_ai_gen">🤖 ابزارهای هوش مصنوعی مولد</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_ai_gen">بهره‌گیری از ابزارهای هوش مصنوعی برای تحقیق، تولید محتوا، تحلیل اطلاعات و افزایش بهره‌وری.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="ai" data-id="prompt-eng">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_prompt_eng">🎯 مهندسی پرامپت</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_prompt_eng">طراحی و بهینه‌سازی پرامپت برای مدل‌های زبانی به‌منظور تولید پاسخ‌های دقیق، تحلیل اطلاعات و حل مسائل.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="ai" data-id="ai-research">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_ai_research">🔬 تحقیق و جمع‌آوری اطلاعات با AI</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_ai_research">جمع‌آوری، ارزیابی و سازمان‌دهی اطلاعات تخصصی با استفاده از ابزارهای هوش مصنوعی.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="60%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="ai" data-id="ai-problem-solving">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_ai_solve">💡 تحلیل و حل مسئله با AI</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_ai_solve">استفاده از هوش مصنوعی برای تحلیل مسائل، بررسی راهکارها و تصمیم‌سازی.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="60%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="ai" data-id="ai-workflows">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_ai_workflows">🔄 طراحی جریان‌های کاری مبتنی بر AI</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_ai_workflows">طراحی و بهینه‌سازی فرایندهای کاری با استفاده از ابزارهای هوش مصنوعی و اتوماسیون.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" aria-hidden="true" id="div-3"><span class="divider-arch"></span></div>
+
+        <!-- بخش ۴: توانمندی‌های تحلیلی و مدیریتی -->
+        <section class="skills-section" data-reveal id="sec-manage">
+            <div class="section-title">
+                <div class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+                <h2 data-i18n="section_manage">توانمندی‌های تحلیلی و مدیریتی</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-cat="manage" data-id="research-dev">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_research_dev">📚 تحقیق و پژوهش</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_research_dev">جمع‌آوری، تحلیل و ارزیابی منابع برای تدوین گزارش‌ها و پروژه‌های پژوهشی.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="manage" data-id="doc">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_doc">📋 مستندسازی</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_doc">تهیه مستندات فنی، آموزشی و اجرایی برای پروژه‌ها و فرایندها.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="manage" data-id="tech-report">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_tech_report">📝 نگارش گزارش‌های فنی</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_tech_report">تنظیم گزارش‌های ساختاریافته و مستند با رویکرد فنی و تحلیلی.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="60%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="manage" data-id="sys-analysis">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_sys_analysis">📊 تحلیل سیستم‌ها</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_sys_analysis">بررسی نیازها، تحلیل ساختار سیستم‌ها و ارائه راهکارهای بهبود.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="manage" data-id="process-improvement">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_process_improve">⚙️ تحلیل و بهبود فرایندها</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_process_improve">شناسایی گلوگاه‌ها و ارائه پیشنهاد برای افزایش بهره‌وری و بهینه‌سازی فرایندها.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="40%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="manage" data-id="excel-data">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_excel_data">📈 تحلیل داده با Excel</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_excel_data">سازمان‌دهی، تحلیل و گزارش‌دهی داده‌ها با استفاده از قابلیت‌های Microsoft Excel.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="manage" data-id="process-mapping">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_process_mapping">🔀 ترسیم فرایندها</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_process_mapping">طراحی و مستندسازی فرایندهای کاری با نمودارهای استاندارد.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="40%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="manage" data-id="system-modeling">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_system_modeling">🌐 مدل‌سازی سیستم‌ها</h3><span class="badge basic" data-i18n="badge_basic">آشنا</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_system_modeling">آشنایی با مدل‌سازی سیستم‌های پویا و شبیه‌سازی مفاهیم پایه با Vensim.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۲۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="20%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="manage" data-id="project-mgmt">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_project_mgmt">📅 مدیریت پروژه</h3><span class="badge basic" data-i18n="badge_basic">آشنا</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_project_mgmt">آشنایی با برنامه‌ریزی، زمان‌بندی و پیگیری فعالیت‌های پروژه.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۲۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="20%"></div></div></div></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" aria-hidden="true" id="div-4"><span class="divider-arch"></span></div>
+
+        <!-- بخش ۵: نرم‌افزارها -->
+        <section class="skills-section" data-reveal id="sec-software">
+            <div class="section-title">
+                <div class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M15 9H3"/></svg></div>
+                <h2 data-i18n="section_software">نرم‌افزارها</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-cat="software" data-id="photoshop">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_photoshop">🎨 Adobe Photoshop</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_photoshop">طراحی و ویرایش پوستر، بنر، کارت ویزیت و سایر محتوای گرافیکی.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="illustrator">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_illustrator">✒️ Adobe Illustrator</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_illustrator">طراحی لوگو، المان‌های گرافیکی و آثار برداری.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="60%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="flstudio">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_flstudio">🎵 FL Studio</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_flstudio">ساخت، تنظیم و ویرایش پروژه‌های صوتی و موسیقی.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="60%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="word">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_word">📄 Microsoft Word</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_word">تهیه، ویرایش و قالب‌بندی اسناد حرفه‌ای.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="excel">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_excel">📊 Microsoft Excel</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_excel">مدیریت، تحلیل و سازمان‌دهی داده‌ها و تهیه گزارش.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="powerpoint">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_powerpoint">📑 Microsoft PowerPoint</h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_powerpoint">طراحی و ارائه اسلایدهای حرفه‌ای.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="msproject">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_msproject">📅 Microsoft Project</h3><span class="badge basic" data-i18n="badge_basic">آشنا</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_msproject">آشنایی با برنامه‌ریزی، زمان‌بندی و مدیریت پروژه.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۲۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="20%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="visio">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_visio">📐 Microsoft Visio</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_visio">ترسیم نمودارها، فلوچارت‌ها و فرایندهای سازمانی.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="45%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="vensim">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_vensim">🔄 Vensim</h3><span class="badge basic" data-i18n="badge_basic">آشنا</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_vensim">مدل‌سازی و شبیه‌سازی مقدماتی سیستم‌های پویا.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۲۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="20%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="rafie">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_rafie">💰 نرم‌افزار حسابداری رافع</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_rafie">آشنایی با ثبت و مدیریت عملیات مالی و حسابداری.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="40%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="parsian">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_parsian">💳 نرم‌افزار حسابداری پارسیان</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_parsian">آشنایی با فرآیندهای مالی، ثبت اسناد و گزارش‌گیری.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="40%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="software" data-id="mahak">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_mahak">💼 نرم‌افزار حسابداری محک</h3><span class="badge mid" data-i18n="badge_mid">متوسط</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_mahak">آشنایی با مدیریت امور مالی و عملیات حسابداری.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۴۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="40%"></div></div></div></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" aria-hidden="true" id="div-5"><span class="divider-arch"></span></div>
+
+        <!-- بخش ۶: زبان‌ها -->
+        <section class="skills-section" data-reveal id="sec-lang">
+            <div class="section-title">
+                <div class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></div>
+                <h2 data-i18n="section_lang">زبان‌ها</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-cat="lang" data-id="lang-en">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_lang_en">🇬🇧 انگلیسی <span class="en-text">(English)</span></h3><span class="badge good" data-i18n="badge_good">خوب</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_lang_en">تسلط خوب بر مهارت‌های ارتباطی و درک متون تخصصی.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۶۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="65%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="lang" data-id="lang-ar">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_lang_ar">🇸🇦 عربی <span class="en-text">(Arabic)</span></h3><span class="badge basic" data-i18n="badge_basic">آشنا</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_lang_ar">آشنایی با متون و مکاتبات پایه.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۲۰٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="20%"></div></div></div></div></div></div>
+                </div>
+
+                <div class="skill-card" data-cat="lang" data-id="lang-cn">
+                    <div class="card-header"><div class="card-title-row"><h3 class="skill-name" data-i18n="skill_lang_cn">🇨🇳 چینی <span class="en-text">(Chinese)</span></h3><span class="badge basic" data-i18n="badge_basic">مقدماتی</span></div><div class="toggle-btn"><span data-i18n="show_details">نمایش جزئیات</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></div></div>
+                    <div class="card-body-wrapper"><div class="card-body-inner"><div class="card-body-content"><p class="skill-desc" data-i18n="desc_lang_cn">آشنایی مقدماتی با زبان و اصطلاحات.</p><div class="progress-ruler-wrapper"><div class="progress-label-row"><span data-i18n="proficiency_label">میزان تسلط</span><span>۱۵٪</span></div><div class="progress-ruler"><div class="progress-fill" data-width="15%"></div></div></div></div></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ نوار پایین موبایل ============ -->
+    <nav class="bottom-tab-bar" aria-label="ناوبری سریع">
+        <a href="index.html" class="tab-item" data-page="profile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span data-i18n="nav_profile">پروفایل</span>
+        </a>
+        <a href="career.html" class="tab-item" data-page="career">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 22v-4M4 12H2M22 12h-2M19.07 4.93l-2.83 2.83M6.34 17.66l-2.83 2.83M17.66 6.34l2.83-2.83M4.93 19.07l2.83-2.83"/></svg>
+            <span data-i18n="nav_career">مسیر حرفه‌ای</span>
+        </a>
+        <a href="skills.html" class="tab-item active" data-page="skills">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <span data-i18n="nav_skills">مهارت‌ها</span>
+        </a>
+        <a href="certificates.html" class="tab-item" data-page="certificates">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <span data-i18n="nav_certs">گواهینامه‌ها</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
